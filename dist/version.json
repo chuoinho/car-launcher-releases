@@ -1,7 +1,7 @@
 {
-  "versionCode": 10007,
-  "versionName": "1.0.7",
+  "versionCode": 10008,
+  "versionName": "1.0.8",
   "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-  "sha256": "c60ccaa9c13b0184f70ebbfd1dbea39fed11da0ca2e9695ceeb7c01aee05b1b1",
-  "notes": "Mặc định tắt ghi nhật ký kết nối (DiagLog, PhoneAppsJournal, SessionAapLog) với công tắc bật/tắt trong LogCard; gộp quản lý OTA theo Phương án A (chỉ hiện banner ngữ cảnh ở Trang chủ khi có bản cập nhật); chuẩn hóa toàn diện giao diện Material Design 3 + WCAG AA cho điện thoại, máy tính bảng (NavigationRail + 2 cột Cài đặt) và mọi tỷ lệ màn hình xe/cụm đồng hồ."
+  "sha256": "00a6389e4eb8e70b53e0a28dcc91e709c0675f827e3ccb7fcabefaf6f55b8433",
+  "notes": "Hoàn thiện chống khóa ngân hàng / VNeID: tự tắt ngay Tùy chọn nhà phát triển & Gỡ lỗi USB/Wi-Fi khi bật ở ngoài xe; đếm ngược 10 giây khi rời xe có JobScheduler dự phòng (OffJob) cùng 2 nút Tắt ngay / Giữ bật lần này; khóa kín mọi luồng nền không cho tự bật lại ADB khi đang ẩn; đánh thức sớm qua Bluetooth xe và thêm nút chuyển nhanh Chế độ Ngân hàng ↔ Bật lại màn xe ngay trên thông báo khi đang chạy xe."
 }
