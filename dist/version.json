@@ -1,7 +1,7 @@
 {
-  "versionCode": 10006,
-  "versionName": "1.0.6",
+  "versionCode": 10007,
+  "versionName": "1.0.7",
   "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-  "sha256": "b7ec377921303b30a29a66205e60f7dd0dae797e1199229eeb00e91d3f6b3230",
-  "notes": "Chuyển ADB sang cầu nối TCP 5555 kết hợp mDNS IP Wi-Fi (chạy Engine và DebugAway trên xe không cần Wi-Fi, tự tách cgroup và tự cấp WRITE_SECURE_SETTINGS + quyền thông báo); bổ sung nút đóng/mở cổng 5555 tức thì và hướng dẫn tự đóng khi rời xe; sửa lỗi crash tải OTA (FormatFlagsConversionMismatchException) và hoàn thiện luồng mở trình cài đặt APK."
+  "sha256": "c60ccaa9c13b0184f70ebbfd1dbea39fed11da0ca2e9695ceeb7c01aee05b1b1",
+  "notes": "Mặc định tắt ghi nhật ký kết nối (DiagLog, PhoneAppsJournal, SessionAapLog) với công tắc bật/tắt trong LogCard; gộp quản lý OTA theo Phương án A (chỉ hiện banner ngữ cảnh ở Trang chủ khi có bản cập nhật); chuẩn hóa toàn diện giao diện Material Design 3 + WCAG AA cho điện thoại, máy tính bảng (NavigationRail + 2 cột Cài đặt) và mọi tỷ lệ màn hình xe/cụm đồng hồ."
 }
