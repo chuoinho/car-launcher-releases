@@ -2,12 +2,20 @@
 
 Kho lưu trữ bản cài đặt công khai (OTA) cho **CarLauncher** (`com.car.launcher`).
 
-## Phiên bản hiện tại: `v1.0.9` (`versionCode: 10009`)
+## Phiên bản hiện tại: `v1.0.10` (`versionCode: 10010`)
 
 - **Tải APK trực tiếp**: [`dist/car-launcher-debug.apk`](https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk)
 - **OTA Manifest**: [`dist/version.json`](https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/version.json)
-- **SHA-256 (APK)**: `2108bc3ed75fff544a0ffcc7f5f9f22351f9f84234bfbb8e1c976ed27da5b2b2`
+- **SHA-256 (APK)**: `2bd93bc16156db4c3371fe6e801ee2de1fb406b272d2cf316b4ed2d2e151c205`
 - **Chứng chỉ ký APK (SHA-256)**: `AD:A8:1F:91:3F:11:3A:56:E7:B3:4B:4F:7B:DB:45:33:FF:CA:68:47:24:5D:86:CD:E9:C9:78:68:66:6B:63:5B`
+
+### Thay đổi trong v1.0.10
+- **Gỡ bỏ hoàn toàn cầu chì Safe Mode (`StartupGuard`)**: tắt vĩnh viễn cảnh báo và màn hình khóa khe trên cả điện thoại lẫn màn xe (`isSafeMode()` luôn trả `false` và tự xóa cờ cũ nếu từng bị kích hoạt).
+- **Sửa lỗi lệch cảm ứng trên xe (`TouchMapper` & `:carapps`)**:
+  - Nhận diện màn có margin báo tọa độ theo full codec frame (ví dụ `1024×600` trong `1280×720`, hoặc `1920×720` trong `1920×1080`) để map 1:1 thay vì vừa thu nhỏ vừa cộng dồn margin hai lần; tự chuyển chế độ tại runtime nếu phát hiện đầu xe gửi gốc `(0, 0)` hoặc scale toàn panel.
+  - Sửa lỗi màn `1080p` chỉ mở luồng `720p` không margin bị hiểu nhầm thành visible-pixels gây lệch chạm 1.5x, và khử mô tả ADC ảo `4095×4095`.
+  - Đồng bộ chính xác kích thước `TextureView` buffer 1:1 (bỏ ngưỡng trễ 16px) và thêm `SlotTouchTransform` để ánh xạ lại tọa độ khi app bị letterbox / xoay dọc trong `VirtualDisplay`.
+- **Mở đúng app đã chọn trong khe (`Hidden.movePackageTasksToDisplay` + `launchSlot`)**: tự động di chuyển task của ứng dụng đang mở trên màn điện thoại (`display 0`) sang đúng `VirtualDisplay` đích khi chọn app trong launcher để không bị hiển thị nhầm app cũ.
 
 ### Thay đổi trong v1.0.9
 - **Thanh Dock tự co giãn thông minh (`Adaptive Rail`)**: tự động thu nhỏ kích thước nút & khoảng đệm trên màn hình thấp/hẹp (`800×480`, `1024×600`, `1280×500`, `720p@220-240dpi`, dọc `480×853dp`) để **luôn hiển thị nút `Back` và `Gọi rảnh tay`**; thêm cử chỉ **vuốt 3 ngón** chỉnh nhanh âm lượng xe (`CarVolumeHud`) hoặc về Trang chủ.

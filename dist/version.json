@@ -1,7 +1,7 @@
 {
-  "versionCode": 10009,
-  "versionName": "1.0.9",
+  "versionCode": 10010,
+  "versionName": "1.0.10",
   "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-  "sha256": "2108bc3ed75fff544a0ffcc7f5f9f22351f9f84234bfbb8e1c976ed27da5b2b2",
-  "notes": "Nâng cấp toàn diện giao diện đa màn hình xe & Material 3: thanh Dock tự co giãn kích thước nút luôn giữ nút Back & Gọi rảnh tay ở mọi độ phân giải; thanh điều khiển SlotMiniBar tự ẩn sau 4s (có Lùi, Đổi app, Tải lại, Đổi chỗ, tỷ lệ hiện tại, Toàn màn, Đóng app); bố cục 3 cột đồng thời cho màn Ultrawide; tìm kiếm tiếng Việt không dấu & trình quản lý Đang chạy / Đóng tất cả; đồng bộ chế độ Ban đêm vào VirtualDisplay, cử chỉ 3 ngón chỉnh âm lượng/về Home, bong bóng tốc độ kéo thả và thiết kế lại mục App trên xe trên điện thoại."
+  "sha256": "2bd93bc16156db4c3371fe6e801ee2de1fb406b272d2cf316b4ed2d2e151c205",
+  "notes": "Gỡ bỏ hoàn toàn cầu chì Safe Mode (StartupGuard) để không bao giờ khóa khe app; sửa triệt để lỗi lệch cảm ứng trên màn hình xe (nhận diện tọa độ frame 1:1 cho màn có margin như 1024x600 / Ultrawide 1920x720, tách riêng màn 1080p stream 720p không margin, khử mô tả ADC 4095x4095, đồng bộ kích thước TextureView 1:1 và biến đổi chạm khi app xoay dọc); tự động kéo task app đang chạy trên điện thoại về đúng VirtualDisplay khi chọn mở app."
 }
