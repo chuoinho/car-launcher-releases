@@ -2,12 +2,21 @@
 
 Kho lưu trữ bản cài đặt công khai (OTA) cho **CarLauncher** (`com.car.launcher`).
 
-## Phiên bản hiện tại: `v1.0.10` (`versionCode: 10010`)
+## Phiên bản hiện tại: `v1.0.11` (`versionCode: 10011`)
 
 - **Tải APK trực tiếp**: [`dist/car-launcher-debug.apk`](https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk)
 - **OTA Manifest**: [`dist/version.json`](https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/version.json)
-- **SHA-256 (APK)**: `2bd93bc16156db4c3371fe6e801ee2de1fb406b272d2cf316b4ed2d2e151c205`
+- **SHA-256 (APK)**: `62266c789d661352fb22af65a6c9bc2c7d9ffdfd176cca3e09c5eabd8499a1bd`
 - **Chứng chỉ ký APK (SHA-256)**: `AD:A8:1F:91:3F:11:3A:56:E7:B3:4B:4F:7B:DB:45:33:FF:CA:68:47:24:5D:86:CD:E9:C9:78:68:66:6B:63:5B`
+
+### Thay đổi trong v1.0.11
+- **Sửa triệt để lỗi `<-> Đổi chỗ` (`CarDisplayServerImpl` & `CarRuntime`)**:
+  - Thêm khoảng trễ `130ms` (`SWAP_REBIND_GAP_MS`) sau khi detach cả hai surface rồi resize trước khi gắn lại vào `VirtualDisplay` đích, loại bỏ xung đột `BufferQueueProducer` khiến khung hình bị đen hoặc treo sau nhiều lần đảo khe.
+  - Thêm khóa nguyên tử `swapInFlight` + chống dội `650ms` và fallback dọn sạch slot nếu một trong hai khe chưa gắn xong.
+- **Sửa nút `C Tải lại` không có tác dụng (`reloadSlot`)**: force-stop toàn bộ task đang kẹt trong khe, detach/reattach lại surface (`bounceSlotSurface`) và mở lại với `FLAG_ACTIVITY_CLEAR_TASK`.
+- **Sửa nút `<- Lùi` treo màn đen khi thoát root Activity (`backInSlot`)**: đồng bộ thứ tự bấm Back trên `slotOps`, sau `420ms` kiểm tra `getTopPackageSlot` — nếu khe trống hoàn toàn thì tự trả khe về giao diện chọn app (`EmptySlotPicker`) thay vì kẹt màn hình đen.
+- **Khắc phục app tự reload khi đổi tỉ lệ / mở YouTube Dark Mode (`SlotBlackWatchdog`)**: không restart watchdog theo `surfaceVersion`, hạ ngưỡng pure-black xuống `luma <= 2` và kiểm tra `getTopPackageSlot` trước khi cho phép relaunch.
+- **Ổn định bố cục `SlotMiniBar` & Drawer (`CarHomeTwoSlot`, `ScalableAppDrawer`)**: giữ cố định vị trí `Đổi chỗ` (làm mờ khi Fullscreen) và `70/30` (bấm khi Fullscreen sẽ thoát về split), tách `X Đóng` sau divider tránh bấm nhầm khi gõ đúp `Toàn màn`, ẩn nút focus rotary `[OpenInNew]` ở chế độ cảm ứng, thu gọn chip vừa khít cả ở chế độ `50/50` và mở rộng vùng bấm pill kéo mở lại (`104×30dp`).
 
 ### Thay đổi trong v1.0.10
 - **Gỡ bỏ hoàn toàn cầu chì Safe Mode (`StartupGuard`)**: tắt vĩnh viễn cảnh báo và màn hình khóa khe trên cả điện thoại lẫn màn xe (`isSafeMode()` luôn trả `false` và tự xóa cờ cũ nếu từng bị kích hoạt).

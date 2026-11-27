@@ -1,7 +1,7 @@
 {
-  "versionCode": 10010,
-  "versionName": "1.0.10",
+  "versionCode": 10011,
+  "versionName": "1.0.11",
   "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-  "sha256": "2bd93bc16156db4c3371fe6e801ee2de1fb406b272d2cf316b4ed2d2e151c205",
-  "notes": "Gỡ bỏ hoàn toàn cầu chì Safe Mode (StartupGuard) để không bao giờ khóa khe app; sửa triệt để lỗi lệch cảm ứng trên màn hình xe (nhận diện tọa độ frame 1:1 cho màn có margin như 1024x600 / Ultrawide 1920x720, tách riêng màn 1080p stream 720p không margin, khử mô tả ADC 4095x4095, đồng bộ kích thước TextureView 1:1 và biến đổi chạm khi app xoay dọc); tự động kéo task app đang chạy trên điện thoại về đúng VirtualDisplay khi chọn mở app."
+  "sha256": "62266c789d661352fb22af65a6c9bc2c7d9ffdfd176cca3e09c5eabd8499a1bd",
+  "notes": "Ổn định toàn bộ nút điều khiển trên SlotMiniBar: thêm độ trễ detach->resize->reattach 130ms và khóa chống chồng chéo giúp Đổi chỗ không còn kẹt BufferQueueProducer/đen màn hình; Tải lại force-stop và khởi động lại sạch kèm bounce surface; nút Lùi tự thoát khe về picker khi về màn gốc app; gỡ false-positive relaunch của SlotBlackWatchdog khi đổi tỉ lệ/toàn màn ở Dark Mode; ổn định vị trí nút Đóng tránh bấm nhầm khi bật Toàn màn hình."
 }
