@@ -1,7 +1,7 @@
 {
-    "versionCode":  10012,
-    "versionName":  "1.0.12",
+    "versionCode":  10013,
+    "versionName":  "1.0.13",
     "apkUrl":  "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-    "sha256":  "d86486a8b865815ecde8108f2c0eb5e75c8f01b680ca07ba2e1db036a95cce2b",
-    "notes":  "Refactor toàn diện Waves 1-6 (SDK 33+, tách controller/UI/domain, unit test) và bổ sung menu chọn kích thước màn hình trong dhu.bat."
+    "sha256":  "1544751973d9dda7e2919f6ef5a6e282d5654508eeb6e6a67a6a9ac763ac653b",
+    "notes":  "v1.0.13: Sửa trùng tên xe, chuẩn hóa tiếng Việt \u0026 UI điện thoại (Preview ngang, Dock, Cài đặt trực quan) và DHU (3 cột ultrawide 1920x720, SlotMiniBar không cắt nút thu gọn, InfoPanel kèm đồng hồ \u0026 nút bật nhanh)."
 }
