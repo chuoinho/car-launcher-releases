@@ -1,7 +1,7 @@
 {
-  "versionCode": 10011,
-  "versionName": "1.0.11",
-  "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-  "sha256": "62266c789d661352fb22af65a6c9bc2c7d9ffdfd176cca3e09c5eabd8499a1bd",
-  "notes": "Ổn định toàn bộ nút điều khiển trên SlotMiniBar: thêm độ trễ detach->resize->reattach 130ms và khóa chống chồng chéo giúp Đổi chỗ không còn kẹt BufferQueueProducer/đen màn hình; Tải lại force-stop và khởi động lại sạch kèm bounce surface; nút Lùi tự thoát khe về picker khi về màn gốc app; gỡ false-positive relaunch của SlotBlackWatchdog khi đổi tỉ lệ/toàn màn ở Dark Mode; ổn định vị trí nút Đóng tránh bấm nhầm khi bật Toàn màn hình."
+    "versionCode":  10012,
+    "versionName":  "1.0.12",
+    "apkUrl":  "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
+    "sha256":  "d86486a8b865815ecde8108f2c0eb5e75c8f01b680ca07ba2e1db036a95cce2b",
+    "notes":  "Refactor toàn diện Waves 1-6 (SDK 33+, tách controller/UI/domain, unit test) và bổ sung menu chọn kích thước màn hình trong dhu.bat."
 }
