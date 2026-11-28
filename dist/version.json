@@ -1,7 +1,7 @@
 {
-    "versionCode": 10015,
-    "versionName": "1.0.15",
+    "versionCode": 10016,
+    "versionName": "1.0.16",
     "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-    "sha256": "431d3982a335183c3112f5726da40272187236cc498bb61c5a33f3f444ca656c",
-    "notes": "v1.0.15: Kiến trúc v2 sạch và ổn định trên Android Auto: (1) APK tối ưu R8/single-DEX giảm từ ~92 MB xuống ~17.3 MB; (2) Ổn định giao diện 2-slot SurfaceView/TextureView, swap zero-IPC, sửa lỗi input/voice/share; (3) Xây lại CarApps display server cho Android 14-17, loại bỏ AppFreezer/KeepAside, sửa main-thread IO và LocalAdb/mDNS; (4) Gia cố ProjectionService/ShellWifi/HeadUnitNetwork + port 5 bản vá upstream AARE, tự phục hồi USB/BT; (5) Tối ưu pipeline Video/Audio/Focus và loại bỏ code thừa."
+    "sha256": "bc6f6a1f18a33af0d71e978aa9b2fac1d470722755abd92b58affce78d9de640",
+    "notes": "v1.0.16: (1) Đơn giản hóa đường cảm ứng app nhúng qua oneway Binder trực tiếp (bỏ hàng đợi TouchQueue), đồng bộ kích thước 1:1 với VirtualDisplay, tách launch app khỏi slotOps và tự làm mới SlotTouchTransform qua DisplayListener để hết chậm & lệch khi mới mở app; (2) Sửa lỗi tự thử kết nối lại 5 lần khi ngắt xe / tắt Bluetooth / tắt Wi-Fi và thêm nút Ngắt kết nối / Dừng thử lại ngay trên Trang chủ."
 }
