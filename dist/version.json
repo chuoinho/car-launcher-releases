@@ -1,7 +1,7 @@
 {
-    "versionCode": 10014,
-    "versionName": "1.0.14",
+    "versionCode": 10015,
+    "versionName": "1.0.15",
     "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-    "sha256": "8d8a056e5aa0c26988ef3f72b2d2009a4c445c3ed701eac766492e802c3dcb5e",
-    "notes": "v1.0.14: Tối ưu :carapps & nạp App tức thì (lazy icon cache, bỏ chờ ping 5s & bỏ restart tcpip:5555), Sáng/Tối/Tự động theo hệ thống cho màn xe (không sửa hệ thống ĐT), hỗ trợ thông báo chuẩn & backfill khi kết nối, sửa cảm ứng khe phụ & tự chỉnh layout 2/3 cột YouTube khi đổi Chia đôi <-> Toàn màn hình."
+    "sha256": "431d3982a335183c3112f5726da40272187236cc498bb61c5a33f3f444ca656c",
+    "notes": "v1.0.15: Kiến trúc v2 sạch và ổn định trên Android Auto: (1) APK tối ưu R8/single-DEX giảm từ ~92 MB xuống ~17.3 MB; (2) Ổn định giao diện 2-slot SurfaceView/TextureView, swap zero-IPC, sửa lỗi input/voice/share; (3) Xây lại CarApps display server cho Android 14-17, loại bỏ AppFreezer/KeepAside, sửa main-thread IO và LocalAdb/mDNS; (4) Gia cố ProjectionService/ShellWifi/HeadUnitNetwork + port 5 bản vá upstream AARE, tự phục hồi USB/BT; (5) Tối ưu pipeline Video/Audio/Focus và loại bỏ code thừa."
 }
