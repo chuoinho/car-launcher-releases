@@ -1,7 +1,7 @@
 {
-    "versionCode":  10014,
-    "versionName":  "1.0.14",
-    "apkUrl":  "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-    "sha256":  null,
-    "notes":  "v1.0.14: Tối ưu :carapps \u0026 nạp App tức thì (lazy icon cache, bỏ chờ ping mù 5s \u0026 bỏ restart tcpip:5555), Sáng/Tối/Tự động theo hệ thống cho màn xe (không sửa hệ thống ĐT), hỗ trợ thông báo chuẩn \u0026 backfill khi kết nối, sửa cảm ứng khe phụ \u0026 tự chỉnh layout 2/3 cột YouTube khi đổi Chia đôi \u003c-\u003e Toàn màn hình."
+    "versionCode": 10014,
+    "versionName": "1.0.14",
+    "apkUrl": "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
+    "sha256": "8d8a056e5aa0c26988ef3f72b2d2009a4c445c3ed701eac766492e802c3dcb5e",
+    "notes": "v1.0.14: Tối ưu :carapps & nạp App tức thì (lazy icon cache, bỏ chờ ping 5s & bỏ restart tcpip:5555), Sáng/Tối/Tự động theo hệ thống cho màn xe (không sửa hệ thống ĐT), hỗ trợ thông báo chuẩn & backfill khi kết nối, sửa cảm ứng khe phụ & tự chỉnh layout 2/3 cột YouTube khi đổi Chia đôi <-> Toàn màn hình."
 }
