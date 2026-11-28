@@ -1,7 +1,7 @@
 {
-    "versionCode":  10013,
-    "versionName":  "1.0.13",
+    "versionCode":  10014,
+    "versionName":  "1.0.14",
     "apkUrl":  "https://raw.githubusercontent.com/chuoinho/car-launcher-releases/main/dist/car-launcher-debug.apk",
-    "sha256":  "1544751973d9dda7e2919f6ef5a6e282d5654508eeb6e6a67a6a9ac763ac653b",
-    "notes":  "v1.0.13: Sửa trùng tên xe, chuẩn hóa tiếng Việt \u0026 UI điện thoại (Preview ngang, Dock, Cài đặt trực quan) và DHU (3 cột ultrawide 1920x720, SlotMiniBar không cắt nút thu gọn, InfoPanel kèm đồng hồ \u0026 nút bật nhanh)."
+    "sha256":  null,
+    "notes":  "v1.0.14: Tối ưu :carapps \u0026 nạp App tức thì (lazy icon cache, bỏ chờ ping mù 5s \u0026 bỏ restart tcpip:5555), Sáng/Tối/Tự động theo hệ thống cho màn xe (không sửa hệ thống ĐT), hỗ trợ thông báo chuẩn \u0026 backfill khi kết nối, sửa cảm ứng khe phụ \u0026 tự chỉnh layout 2/3 cột YouTube khi đổi Chia đôi \u003c-\u003e Toàn màn hình."
 }
